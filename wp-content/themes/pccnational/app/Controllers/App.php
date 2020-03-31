@@ -47,4 +47,18 @@ class App extends Controller
 
       return $data;
     }
+
+    public function formTemp()
+    {
+      $data = [
+        'subtext' => get_field('subtext'),
+      ];
+
+      return $data;
+    }
+
+    public function hero()
+    {
+      return get_field('hero', 'option');
+    }
 }

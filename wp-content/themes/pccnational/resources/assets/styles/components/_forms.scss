@@ -37,25 +37,115 @@
       width: 100%;
       margin-bottom: 25px;
 
+      a {
+        font-weight: 800;
+      }
+
       input,
-      textarea {
+      textarea,
+      select {
         width: 100%;
         border: transparent;
         display: block;
         padding: 15px;
+        background-color: #efefef;
+        border-radius: 8px;
+        height: 55px;
       }
 
       textarea {
         height: 190px;
       }
+
+      &.hidden_label {
+        label.gfield_label {
+          display: none;
+        }
+      }
+
+      .ginput_container_name {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          display: inline-block;
+          width: calc(50% - 15px);
+
+        }
+      }
+
+      .ginput_container_address {
+        input {
+          margin-bottom: 15px;
+        }
+
+        @include laptop {
+          span.address_city,
+          span.address_state,
+          span.address_zip {
+            display: inline-block;
+            width: calc(33% - 7.5px);
+          }
+
+          span.address_city,
+          span.address_state {
+            margin-right: 15px;
+          }
+        }
+      }
+
+
+      ul.gfield_radio,
+      ul.gfield_checkbox {
+        li {
+          margin-bottom: 5px!important;
+
+          input {
+            height: 20px;
+            width: 20px;
+            margin-right: 5px;
+          }
+
+          input,
+          label {
+            display: inline;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      &.yesno {
+        ul.gfield_radio {
+          display: flex;
+          width: 180px;
+        }
+      }
+
+      &.bold-title {
+        label.gfield_label {
+          font-weight: 800;
+        }
+      }
+
+      &.gsection {
+        margin-top: 60px;
+      }
     }
   }
 }
 
-.gform_wrapper .gform_footer input[type=submit]:not(:disabled):not(.disabled) {
-  width: 100%;
-  text-transform: capitalize;
-  border: solid 3px #fff;
-  font-size: 22px;
-  padding: 15px;
+.gform_wrapper .gform_footer {
+  display: flex;
+
+  input[type=submit]:not(:disabled):not(.disabled) {
+   // width: 100%;
+   text-transform: capitalize;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 24px;
+   padding: 15px 60px;
+ }}
+
+li#field_1_24 {
+  margin-top: 60px;
 }
