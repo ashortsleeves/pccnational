@@ -36,11 +36,6 @@ class App extends Controller
       return get_field('logo', 'option');
     }
 
-    public function hero()
-    {
-      return get_field('hero', 'option');
-    }
-
     public function footer()
     {
       $data = [
@@ -48,15 +43,6 @@ class App extends Controller
         'content'    => get_field('contact_footer_content','option'),
         'background' => get_field('contact_footer_background', 'option'),
         'site_info'  => get_field('site_info', 'option'),
-      ];
-
-      return $data;
-    }
-
-    public function basicSettings()
-    {
-      $data = [
-        'hero_section' => get_field('hero_section'),
       ];
 
       return $data;

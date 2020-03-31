@@ -15,17 +15,49 @@
     ul.nav {
       flex-direction: column;
 
-      a,
-      span {
+      a {
         display: block;
-        color: #000;
+        color: $brand-primary;
         font-size: 22px;
+        font-weight: 800;
         padding: 12px 20px;
+
+        span {
+          display: none;
+        }
       }
 
       li.current-menu-item a {
-        background-color: $brand-primary;
+        background-color: $brand-secondary;
         color: #fff;
+      }
+
+      li.btn-nav {
+        a {
+          @include btn;
+
+          font-size: 22px;
+
+          &::after {
+            margin-left: 5px;
+            display: inline;
+            content: "\F007";
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 400;
+          }
+        }
+      }
+
+      li.btn-yellow a {
+        background-color: $brand-yellow;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      li.btn-hide {
+        display: none !important;
       }
     }
   }

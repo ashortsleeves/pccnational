@@ -1,11 +1,11 @@
 @mixin btn {
   color: #fff;
-  background-color: $brand-secondary;
+  background-color: $brand-primary;
   border-radius: 8px;
   font-weight: 800;
   transition: 0.3s;
   font-size: $body-font-size;
-  padding: 11px 16px;
+  padding: 9px 20px;
 
   &:hover,
   &:focus {
@@ -15,10 +15,11 @@
 }
 
 .gform_wrapper .gform_footer input[type=submit]:not(:disabled):not(.disabled),
-a.btn {
+a.btn,
+.fp-login .login-submit input[type=submit] {
   @include btn;
 
-  letter-spacing: 0.05rem;
+  line-height: 1;
 
   &.btn-white {
     color: $brand-primary;

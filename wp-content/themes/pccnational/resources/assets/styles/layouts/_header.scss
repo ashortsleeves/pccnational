@@ -18,7 +18,6 @@ header.banner {
   a.brand {
     position: relative;
     color: $brand-primary;
-    font-weight: 800;
     font-size: 22px;
     line-height: 1;
     display: block;
@@ -155,6 +154,7 @@ header.banner {
           a {
             @include btn;
 
+            background-color: $brand-secondary;
             color: #fff;
             padding: 11px 13px;
 
@@ -226,7 +226,7 @@ header.banner {
         }
 
         &.btn-hide {
-          display: none;
+          display: none !important;
         }
         //
         // &.login-hide {

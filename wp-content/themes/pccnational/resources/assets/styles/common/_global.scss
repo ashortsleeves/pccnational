@@ -12,9 +12,9 @@ body.sideNavBody { // any body class found on every page can be used here, this 
   background-color: #ececec;
 }
 
-.wrap {
-  flex: 1 1 auto;
-}
+// .wrap {
+//   flex: 1 1 auto;
+// }
 
 html,
 body {
@@ -117,5 +117,43 @@ ul.nav a {
 
   @include hd {
     max-width: 1170px;
+  }
+}
+
+a.brand {
+  color: #fff;
+  position: relative;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+  display: block;
+  z-index: 999;
+
+
+  @include tablet {
+    font-size: 24px;
+  }
+
+  span {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.container-sm {
+  @include laptop {
+    max-width: 990px !important;
+  }
+}
+
+.cardstyle {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 10px 10px 18px -17px rgba(0, 0, 0, 0.30);
+
+  @include laptop {
+    padding: 25px;
   }
 }

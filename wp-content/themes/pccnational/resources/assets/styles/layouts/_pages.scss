@@ -9,3 +9,143 @@
     padding: 140px 0;
   }
 }
+.hero {
+  .fp-login {
+    width: 100%;
+
+    @include tablet {
+      width: 350px;
+    }
+
+    .login-icon {
+      background-color: $brand-primary;
+      height: 115px;
+      width: 115px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 180px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+
+      i.fa-users {
+        font-weight: 400;
+        color: #fff;
+        font-size: 60px;
+        text-align: center;
+      }
+    }
+
+    form {
+      width: 100%;
+
+      @include tablet {
+        width: 350px;
+      }
+    }
+
+    p.login-username,
+    p.login-password {
+      position: relative;
+      border-radius: 8px;
+      box-shadow: 10px 10px 18px -17px rgba(0, 0, 0, 0.30);
+      width: 100%;
+      background-color: #fff;
+
+      &::after {
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        top: 10px;
+        left: 14px;
+        content: "\F007";
+        padding-right: 10px;
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 400;
+        color: $brand-primary;
+        border-right: solid 1px $brand-primary;
+        z-index: 999;
+      }
+
+      label {
+        position: absolute;
+        color: #999;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        padding: 15px 15px 15px 60px;
+        line-height: 1;
+      }
+
+      input {
+        z-index: 998;
+        background-color: transparent;
+        position: relative;
+        border: transparent;
+        padding: 15px 15px 15px 60px;
+        width: 100%;
+        line-height: 1;
+
+        &:focus {
+          background-color: #fff;
+        }
+      }
+    }
+
+    p.login-password {
+      &::after {
+        content: "\f30d";
+      }
+    }
+
+    p.login-remember {
+      //for the checkbox
+      font-size: 12px;
+
+      label {
+        // //for the form
+        // user-select: none;
+        //
+        // //for the checkbox
+        // position: relative;
+        // padding-left: 35px;
+        // cursor: pointer;
+        //
+        // &::before {
+        //   display: block;
+        //   content: " ";
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        //   height: 25px;
+        //   width: 25px;
+        //   background-color: #eee;
+        // }
+        //
+        // input {
+        //   position: absolute;
+        //   opacity: 0;
+        //   cursor: pointer;
+        //   height: 0;
+        //   width: 0;
+        // }
+        //
+        // &:hover input ~ &::before {
+        //   background-color: #ccc;
+        // }
+      }
+    }
+
+    .login-submit input[type=submit] {
+      font-size: 20px;
+      width: 100%;
+      text-transform: uppercase;
+      padding: 15px;
+    }
+
+    a.forgot-password {
+      font-size: 12px;
+    }
+  }
+}

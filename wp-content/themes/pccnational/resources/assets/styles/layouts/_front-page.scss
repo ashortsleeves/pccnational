@@ -1,0 +1,66 @@
+.hero {
+  width: 100%;
+
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+    flex-direction: column-reverse;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    @include laptop {
+      min-height: calc(100vh - 331px);
+    }
+  }
+
+  .fp-section {
+    @include tablet {
+      width: auto;
+      max-width: 350px;
+    }
+  }
+
+  .fp-content {
+    text-align: center;
+
+    h1 {
+      font-weight: 400;
+      color: #333;
+      font-size: 16px;
+      text-align: center;
+      line-height: 1;
+      margin-bottom: 0;
+    }
+
+    span {
+      display: block;
+      color: $brand-primary;
+      font-weight: 800;
+      font-size: 24px;
+      text-align: center;
+      line-height: 1;
+      padding-bottom: 15px;
+      border-bottom: solid 2px #e6e6e6;
+      margin-bottom: 15px;
+    }
+  }
+
+  .divider {
+    width: 2px;
+    height: 30px;
+
+    @include tablet {
+      margin: 0 15px;
+      height: 330px;
+    }
+
+    @include laptop {
+      background-color: $brand-primary;
+    }
+  }
+}
