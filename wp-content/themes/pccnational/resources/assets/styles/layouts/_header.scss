@@ -1,0 +1,249 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+header.banner {
+  background-color: $brand-primary;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  a.brand {
+    position: relative;
+    color: $brand-primary;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 1;
+    display: block;
+    height: 90px;
+    padding: 25px 0;
+    margin-bottom: -15px;
+    z-index: 999;
+
+    @include baby {
+      font-size: 24px;
+    }
+
+    @include tablet {
+      font-size: 30px;
+      padding: 23px 0 27px;
+    }
+
+    span {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &::before {
+      z-index: -1;
+      display: block;
+      content: " ";
+      position: absolute;
+      right: -10px;
+      bottom: 0;
+      width: 100vw;
+      height: calc(100% + 50px);
+      background-color: #fff;
+      // border-top: 100px solid red;
+      // border-right: 100px solid transparent;
+      border-radius: 8px;
+      transform: skewX(-15deg);
+
+      @include baby {
+        right: -25px;
+      }
+    }
+  }
+
+  nav.nav-primary {
+    margin-left: auto;
+    margin-right: 8px;
+
+    @include laptop {
+      margin-right: none;
+    }
+
+    ul {
+      justify-content: flex-end;
+      flex-wrap: wrap-reverse;
+
+      li {
+        display: none;
+
+        @include laptop {
+          display: list-item;
+          padding: 27px 8px;
+        }
+
+        @include desktop {
+          padding: 27px 15px;
+        }
+
+        a {
+          display: block;
+          color: #fff;
+          padding: 0;
+          line-height: 1;
+          position: relative;
+
+          span {
+            display: none;
+
+            @include desktop {
+              display: inline;
+            }
+          }
+
+          &::before {
+            position: absolute;
+            display: block;
+            content: " ";
+            top: calc(100% + 2px);
+            height: 2px;
+            background-color: #fff;
+            left: 50%;
+            right: 50%;
+            opacity: 0;
+            transition: 0.3s;
+          }
+
+          &:hover,
+          &:focus {
+            &::before {
+              opacity: 1;
+              left: 0;
+              right: 0;
+            }
+          }
+        }
+
+        &.current_page_item {
+          a {
+            &::before {
+              opacity: 1;
+              left: 0;
+              right: 0;
+            }
+          }
+        }
+
+        &.btn-nav {
+          background-color: transparent !important;
+          display: none;
+          padding: 2.5px 0 2.5px 5px;
+
+          @include phablet {
+            display: list-item;
+          }
+
+          @include laptop {
+            padding: 17px 0 17px 8px;
+          }
+
+          @include desktop {
+            padding: 17px 0 17px 15px;
+          }
+
+          a {
+            @include btn;
+
+            color: #fff;
+            padding: 11px 13px;
+
+            @include laptop {
+              padding: 9px 13px;
+            }
+
+            &::after {
+              margin-left: 5px;
+              display: inline;
+              content: "\F007";
+              font-family: "Font Awesome 5 Pro";
+              font-weight: 400;
+            }
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+        //
+        &.btn-logged-in {
+          display: none;
+
+          @include tablet {
+            display: list-item;
+          }
+
+          a {
+            span {
+              display: none;
+            }
+
+            &::after {
+              margin-left: 0;
+            }
+
+            @include tablet {
+              &::after {
+                margin-left: 5px;
+              }
+
+              span {
+                display: inline;
+              }
+            }
+          }
+        }
+
+        &.btn-yellow {
+          display: none;
+
+          @include mobile {
+            display: list-item;
+          }
+
+          a {
+            background-color: $brand-yellow;
+            width: 90px;
+
+            @include phablet {
+              width: auto;
+            }
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+
+        &.btn-hide {
+          display: none;
+        }
+        //
+        // &.login-hide {
+        //   display: none;
+        // }
+        //
+        // &.btn-show {
+        //   display: none !important;
+        // }
+        &.homepage {
+          display: none;
+
+          @include desktop {
+            display: list-item;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@mixin btn {
+  color: #fff;
+  background-color: $brand-secondary;
+  border-radius: 8px;
+  font-weight: 800;
+  transition: 0.3s;
+  font-size: $body-font-size;
+  padding: 11px 16px;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: lighten($brand-primary, 15%);
+  }
+}
+
+.gform_wrapper .gform_footer input[type=submit]:not(:disabled):not(.disabled),
+a.btn {
+  @include btn;
+
+  letter-spacing: 0.05rem;
+
+  &.btn-white {
+    color: $brand-primary;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      color: lighten($brand-primary, 10);
+    }
+  }
+
+  &.btn-lg {
+    @include laptop {
+      padding: 20px 45px;
+    }
+  }
+}

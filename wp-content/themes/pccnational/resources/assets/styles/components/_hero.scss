@@ -1,0 +1,25 @@
+section.hero {
+  .container {
+    height: 250px;
+
+    @include laptop {
+      height: 350px;
+    }
+  }
+
+  &.hero-fp {
+    .container {
+      @include tablet {
+        height: 400px;
+      }
+
+      @include laptop {
+        height: 500px;
+      }
+
+      @include desktop {
+        height: 700px;
+      }
+    }
+  }
+}

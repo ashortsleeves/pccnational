@@ -1,0 +1,36 @@
+@import "common/variables";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+// @import "~slick-carousel/slick/slick.scss";
+// @import "~slick-carousel/slick/slick-theme.scss";
+@import "~@fortawesome/fontawesome-pro/css/fontawesome.css";
+@import "~@fortawesome/fontawesome-pro/css/brands.css";
+@import "~@fortawesome/fontawesome-pro/css/light.css";
+@import "~@fortawesome/fontawesome-pro/css/regular.css";
+@import "~@fortawesome/fontawesome-pro/css/solid.css";
+
+/** Import theme styles */
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/wp-classes";
+@import "components/sidenav";
+@import "components/hamburger";
+@import "components/hero";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/front-page";
+@import "layouts/posts";
+@import "layouts/tinymce";
