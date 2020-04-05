@@ -226,7 +226,7 @@ header.banner {
         }
 
         &.btn-hide {
-          display: none !important;
+          display: none;
         }
         //
         // &.login-hide {
@@ -244,6 +244,21 @@ header.banner {
           }
         }
       }
+
+      &.sl-logged-in {
+        li.btn-logged-in {
+          display: none;
+
+          @include tablet {
+            display: list-item;
+          }
+        }
+
+        li.login-hide {
+          display: none !important;
+        }
+      }
     }
   }
+
 }

@@ -6,6 +6,7 @@
   transition: 0.3s;
   font-size: $body-font-size;
   padding: 9px 20px;
+  border: transparent;
 
   &:hover,
   &:focus {
@@ -16,7 +17,8 @@
 
 .gform_wrapper .gform_footer input[type=submit]:not(:disabled):not(.disabled),
 a.btn,
-.fp-login .login-submit input[type=submit] {
+.fp-login .login-submit input[type=submit],
+.wp-block-button .wp-block-button__link {
   @include btn;
 
   line-height: 1;
@@ -34,6 +36,11 @@ a.btn,
   &.btn-lg {
     @include laptop {
       padding: 20px 45px;
+      font-size: 20px;
     }
+  }
+
+  &.btn-secondary {
+    background-color: $brand-yellow;
   }
 }

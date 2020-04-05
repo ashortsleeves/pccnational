@@ -57,7 +57,17 @@
       }
 
       li.btn-hide {
-        display: none !important;
+        display: none;
+      }
+
+      &.sl-logged-in {
+        li.btn-logged-in {
+          display: list-item;
+        }
+
+        li.login-hide {
+          display: none !important;
+        }
       }
     }
   }
