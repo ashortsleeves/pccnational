@@ -229,3 +229,40 @@
     }
   }
 }
+
+.dashboard-content {
+  h4 {
+    font-size: $body-font-size;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    display: block;
+    border-bottom: solid 2px #e6e6e6;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    line-height: 1;
+  }
+
+  .accordion {
+    margin-top: 30px;
+
+    .card {
+      background-color: transparent;
+      border: transparent;
+
+      .card-header {
+        background-color: transparent;
+        padding: 0;
+
+        h2 {
+          button {
+            font-weight: 800;
+            font-size: 20px;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+}

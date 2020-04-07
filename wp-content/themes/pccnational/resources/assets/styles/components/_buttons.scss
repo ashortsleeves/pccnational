@@ -43,4 +43,14 @@ a.btn,
   &.btn-secondary {
     background-color: $brand-yellow;
   }
+
+  &.btn-design-request {
+    &::before {
+      margin-right: 5px;
+      display: inline;
+      content: "\f1d8";
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 400;
+    }
+  }
 }
