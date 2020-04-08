@@ -17,6 +17,37 @@
     }
   }
 
+  .cardstyle-start {
+    @include laptop {
+      padding: 60px 25px 25px;
+    }
+  }
+
+  .cardstyle-mid {
+    @include laptop {
+      padding: 25px 25px;
+    }
+  }
+
+  .cardstyle-end {
+    @include laptop {
+      padding: 25px 25px 60px;
+    }
+  }
+
+  .cardstyle-half {
+    @include tablet {
+      width: calc(50% - 12.5px);
+      display: inline-block;
+    }
+  }
+
+  .cardstyle-half-second {
+    @include tablet {
+      margin-left: 25px;
+    }
+  }
+
   .container {
     height: 100%;
     min-height: calc(100vh - 145px);

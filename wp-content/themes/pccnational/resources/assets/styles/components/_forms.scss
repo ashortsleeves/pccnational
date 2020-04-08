@@ -53,6 +53,10 @@
         height: 55px;
       }
 
+      .ginput_container_fileupload input {
+        background-color: #fff;
+      }
+
       textarea {
         height: 190px;
       }
@@ -135,10 +139,17 @@
         label.gfield_label {
           font-weight: 800;
           font-size: 26px;
-          
+
         }
       }
     }
+  }
+
+  .wp-wrapper-half,
+  .wp-wrapper-half-cardstyle {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
