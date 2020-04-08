@@ -41,6 +41,11 @@
         font-weight: 800;
       }
 
+      .gfield_description {
+        font-style: italic;
+        margin-bottom: 15px;
+      }
+
       input,
       textarea,
       select {
@@ -138,8 +143,12 @@
       &.lg-label {
         label.gfield_label {
           font-weight: 800;
-          font-size: 26px;
+          font-size: $h3-size;
+          color: $brand-primary;
 
+          @include laptop {
+            font-size: $h2-size;
+          }
         }
       }
     }
@@ -163,8 +172,40 @@
    margin-right: auto;
    font-size: 24px;
    padding: 15px 60px;
- }}
+  }
+}
 
-li#field_1_24 {
+#field_1_24 {
   margin-top: 60px;
+}
+
+#field_6_51 {
+  margin-top: 60px;
+  margin-bottom: 15px;
+
+  .center-text {
+    width: 100%;
+    display: block;
+  }
+}
+
+#field_6_52,
+#field_6_53 {
+  margin-top: 0;
+
+  h2 {
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include laptop {
+      font-size: 25px;
+    }
+  }
+}
+
+#field_6_60 {
+  label.gfield_label {
+    font-weight: 800;
+  }
 }

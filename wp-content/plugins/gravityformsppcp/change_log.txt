@@ -1,0 +1,6 @@
+### 1.0.1
+- Fixed an issue where newly registered PayPal accounts cannot see their accounts are connected and their status.
+
+
+### 1.0 | 2020-03-30
+- It's all new!

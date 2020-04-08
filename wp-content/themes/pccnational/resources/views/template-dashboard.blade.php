@@ -52,6 +52,7 @@
                 </div>
               </div>
             </div>
+            <h3 class="h3-logout"><a href="/login"><i class="fas fa-sign-out-alt"></i> Log Out</a></h3>
           </div>
         </div>
       </section>
