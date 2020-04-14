@@ -129,10 +129,10 @@ add_action( 'plugins_loaded', function() {
     * Add company logo to admin login page
     */
     add_action( 'login_enqueue_scripts', function () {
-      if( get_field( 'site_logo', 'option' )) : ?>
+      if( get_field( 'logo', 'option' )) : ?>
         <style type="text/css">
             #login h1 a, .login h1 a {
-                background-image: url(<?= get_field('site_logo', 'option'); ?>);
+                background-image: url(<?= get_field('logo', 'option'); ?>);
                 height: 95px;
                 width: 320px;
                 background-size: contain;
