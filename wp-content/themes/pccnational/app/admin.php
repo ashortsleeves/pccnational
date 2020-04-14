@@ -237,3 +237,23 @@ if ( !current_user_can( 'edit_user', $user_id ) ) {
 update_user_meta( $user_id, 'contactcustomers', $_POST['contactcustomers'] );
 
 });
+
+/* Main redirection of the default login page */
+
+add_action('init', function() {
+	$login_page  = home_url('/login/');
+	$page_viewed = basename($_SERVER['REQUEST_URI']);
+
+	if($page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
+		wp_redirect($login_page);
+		exit;
+	}
+});
+
+// /* Where to go if a login failed */
+//
+// add_action('wp_login_failed', function() {
+// 	$login_page  = home_url('/login/');
+// 	wp_redirect($login_page . '?login=failed');
+// 	exit;
+// });
