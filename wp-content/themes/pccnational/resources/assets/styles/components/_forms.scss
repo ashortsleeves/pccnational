@@ -275,3 +275,14 @@
 .gfield_visibility_hidden {
   display: none !important;
 }
+
+#field_2_5,
+#field_1_26 {
+  margin-bottom: 0;
+  height: 0;
+  margin-top: -15px;
+}
+
+.validation_message {
+  color: $red;
+}

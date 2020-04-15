@@ -11,9 +11,6 @@
 
     @include tablet {
       flex-direction: row;
-    }
-
-    @include laptop {
       min-height: calc(100vh - 331px);
     }
   }

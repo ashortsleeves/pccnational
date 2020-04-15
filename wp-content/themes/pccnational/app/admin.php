@@ -257,3 +257,12 @@ add_action('init', function() {
 // 	wp_redirect($login_page . '?login=failed');
 // 	exit;
 // });
+
+
+// Disable Subscriber access to admin
+add_action('init',function() {
+  if( is_admin() && !defined('DOING_AJAX') && ( current_user_can('subscriber') || current_user_can('contributor') ) ){
+    wp_redirect(home_url());
+    exit;
+  }
+});

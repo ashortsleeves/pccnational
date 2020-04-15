@@ -71,6 +71,10 @@ footer.content-info {
   }
 
   .nap {
+    @include tablet {
+      margin-right: 5px;
+    }
+
     ul {
       list-style-type: none;
       padding-left: 0;
