@@ -68,6 +68,14 @@ h3,
   }
 }
 
+h4,
+.h4 {
+  color: $heading-color;
+  font-family: $heading-font;
+  font-weight: $h3-weight;
+  font-size: $body-font-size;
+}
+
 p,
 li {
   font-family: $body-font;
@@ -156,4 +164,12 @@ a.brand {
   @include laptop {
     padding: 25px;
   }
+}
+
+.green {
+  color: $green;
+}
+
+.red {
+  color: $red;
 }

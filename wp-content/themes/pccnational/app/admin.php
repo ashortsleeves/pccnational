@@ -225,6 +225,16 @@ add_action( 'edit_user_profile', function( $user ) { ?>
       <input type="text" name="otherdata" id="otherdata" value="<?php echo esc_attr( get_the_author_meta( 'otherdata', $user->ID ) ); ?>" class="regular-text" /><br />
       <span class="description"><?php _e("What best describes your business (Other)"); ?></span>
     </td>
+
+  </tr>
+
+  <tr>
+  <th></th>
+    <td>
+      <input type="text" name="tos" id="tos" value="<?php echo esc_attr( get_the_author_meta( 'tos', $user->ID ) ); ?>" class="regular-text" /><br />
+      <span class="description"><?php _e("TOS"); ?></span>
+    </td>
+
   </tr>
 </table>
 <?php });
