@@ -67,7 +67,13 @@
       }
 
       .ginput_container_fileupload input {
-        background-color: #fff;
+        max-width: 200px;
+        background-color: $brand-primary;
+
+        &:hover,
+        &:focus {
+          background-color: $brand-hover;
+        }
       }
 
       textarea {
@@ -86,8 +92,11 @@
 
         span {
           display: inline-block;
-          width: calc(50% - 15px);
+          width: calc(50% - 5px);
 
+          @include laptop {
+              width: calc(50% - 15px);
+          }
         }
       }
 
@@ -167,6 +176,14 @@
     width: 50%;
     display: inline-block;
     vertical-align: top;
+  }
+
+  .cardstyle {
+    width: calc(100% + 30px);
+
+    @include phablet {
+      width: 100%;
+    }
   }
 }
 

@@ -1,0 +1,105 @@
+// a[href$=".xlsm"],
+// a[href$=".xls"],
+// a[href$=".pdf"],
+// a[href$=".jpg"],
+// a[href$=".png"],
+// a[href$=".doc"],
+// a[href$=".docx"],
+// a[href$=".ppt"],
+// a[href$=".pptx"],
+// a[href$=".zip"],
+// a[href$=".exe"] {
+//   &::before {
+//     display: inline;
+//     font-family: 'Font Awesome 5 Pro';
+//     content: "\f15c";
+//     margin-right: 5px;
+//   }
+// }
+
+// a[href$=".xlsm"]::before,
+// a[href$=".xls"]::before {
+//   content: "\f1c3";
+//   color: $green;
+// }
+//
+//
+// a[href$=".pdf"]::before {
+//   content: "\f1c1";
+//   color: $red;
+// }
+//
+// a[href$=".jpg"]::before,
+// a[href$=".png"]::before {
+//   content: "\f1c5";
+//   color: $purple;
+// }
+//
+//
+// a[href$=".doc"]::before,
+// a[href$=".docx"]::before {
+//   content: "\f1c2";
+//   color: $blue;
+// }
+//
+// a[href$=".ppt"]::before,
+// a[href$=".pptx"]::before {
+//   content: "\f1c4";
+//   color: $red;
+// }
+//
+// a[href$=".zip"]::before{
+//   content: "\f1c6";
+//   color: $orange;
+// }
+
+
+
+ul.resources-ul {
+  a {
+    &::before {
+      display: inline;
+      font-family: 'Font Awesome 5 Pro';
+      content: "\f15c";
+      margin-right: 5px;
+      color: $brand-primary;
+      font-weight: 800;
+    }
+  }
+
+  a[href$=".xlsm"]::before,
+  a[href$=".xls"]::before {
+    content: "\f1c3";
+    color: $green;
+  }
+
+
+  a[href$=".pdf"]::before {
+    content: "\f1c1";
+    color: $red;
+  }
+
+  a[href$=".jpg"]::before,
+  a[href$=".png"]::before {
+    content: "\f1c5";
+    color: $purple;
+  }
+
+
+  a[href$=".doc"]::before,
+  a[href$=".docx"]::before {
+    content: "\f1c2";
+    color: $blue;
+  }
+
+  a[href$=".ppt"]::before,
+  a[href$=".pptx"]::before {
+    content: "\f1c4";
+    color: $red;
+  }
+
+  a[href$=".zip"]::before{
+    content: "\f1c6";
+    color: $orange;
+  }
+}

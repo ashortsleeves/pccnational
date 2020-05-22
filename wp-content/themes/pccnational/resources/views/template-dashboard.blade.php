@@ -33,13 +33,18 @@
 
                 <div id="collapseZero" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                   <div class="card-body">
+                  @if($dashboard_resources)
                     <ul class="resources-ul">
-                      <li><a href="/terms-of-service-agreement/" target="_blank"><i class="fas fa-file-contract"></i> Terms of Service Agreement</a></li>
-                      <li><a href="/limited-partnership-agreement/" target="_blank"><i class="fas fa-file-contract"></i> Limited Partnership Agreement</a></li>
-                      <li><a href="/wp-content/uploads/2020/05/Budget-Planning-Guide.xlsm"><i class="fas fa-file-excel green"></i> Budget Planning Guide</a></li>
-                      <li><a href="/wp-content/uploads/2020/05/Measuring-Guide.pptx"><i class="fas fa-file-powerpoint red"></i> Measuring Guide</a></li>
-                    </ul>
-
+                        @foreach($dashboard_resources as $resource)
+                          <li>
+                            @if($resource['link_type'] === 'File')
+                              <a href="{{$resource['file']['url']}}">{{$resource['file']['title']}}</a>
+                            @else
+                              <a href="{{$resource['link']['url']}}" target="{{$resource['link']['target']}}">{{$resource['link']['title']}}</a>
+                            @endif
+                          </li>
+                        @endforeach
+                  @endif
 
                   </div>
                 </div>

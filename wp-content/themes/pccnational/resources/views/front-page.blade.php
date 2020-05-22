@@ -40,9 +40,8 @@
           @endphp
           <a class="forgot-password" href="/wp-login.php?action=lostpassword">Forgot Password?</a>
         </div>
+
       </div>
     </div>
-
-
   @endwhile
 @endsection

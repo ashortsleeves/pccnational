@@ -19,7 +19,9 @@
 .gform_wrapper .gform_footer input[type=submit]:not(:disabled):not(.disabled),
 a.btn,
 .fp-login .login-submit input[type=submit],
-.wp-block-button .wp-block-button__link {
+.wp-block-button .wp-block-button__link,
+.gform_button_select_files,
+.btn-primary {
   @include btn;
 
   line-height: 1;
@@ -54,4 +56,19 @@ a.btn,
       font-weight: 400;
     }
   }
+}
+
+.btn-lg {
+
+
+  @include laptop {
+    padding: 20px 45px;
+    font-size: 20px;
+  }
+}
+
+.btn-secondary {
+  @include btn;
+
+  background-color: $brand-yellow;
 }
