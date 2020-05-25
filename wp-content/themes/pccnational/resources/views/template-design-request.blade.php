@@ -22,7 +22,7 @@
 
       @if($modal)
         <div class="container-modal-btn">
-          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal">{!! $modal['title'] !!}<i class="fas fa-book-open"></i></button>
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal">Specifier Catalog<i class="fas fa-book-open"></i></button>
         </div>
         <div class="modal fade bd-example-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"  data-keyboard="false">
           <div class="modal-dialog modal-lg">
