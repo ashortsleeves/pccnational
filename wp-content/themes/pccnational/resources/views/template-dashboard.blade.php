@@ -40,7 +40,7 @@
                             @if($resource['link_type'] === 'File')
                               <a href="{{$resource['file']['url']}}">{{$resource['file']['title']}}</a>
                             @else
-                              <a href="{{$resource['link']['url']}}" target="{{$resource['link']['target']}}">{{$resource['link']['title']}}</a>
+                              <a href="{{$resource['link']['url']}}" target="_blank">{{$resource['link']['title']}}</a>
                             @endif
                           </li>
                         @endforeach
