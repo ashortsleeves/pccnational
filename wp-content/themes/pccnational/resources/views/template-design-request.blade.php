@@ -22,7 +22,16 @@
 
       @if($modal)
         <div class="container-modal-btn">
-          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal">Specifier Catalog<i class="fas fa-book-open"></i></button>
+          <div class="modal-btn-wrap">
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal">Starmark</button>
+            @if($modal_crew)
+              <button type="button" class="btn btn-primary btn-light-blue" data-toggle="modal" data-target=".bd-example-crew">Crew Series</button>
+            @endif
+            @if($modal_europa)
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-europa">Europa</button>
+            @endif
+          </div>
+          <button type="button" class="btn btn-secondary catalog-button">Specifier Catalogs<i class="fas fa-book-open"></i></button>
         </div>
         <div class="modal fade bd-example-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"  data-keyboard="false">
           <div class="modal-dialog modal-lg">
@@ -31,11 +40,40 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
               <div class="modal-body">
-                <embed src="{{$modal['url']}}">
+                <embed src="{{$modal['url']}}" class="lozad">
               </div>
             </div>
           </div>
         </div>
+
+        @if($modal_crew)
+          <div class="modal fade bd-example-crew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"  data-keyboard="false">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  {!! $modal_crew !!}
+                </div>
+              </div>
+            </div>
+          </div>
+        @endif
+        @if($modal_europa)
+          <div class="modal fade bd-example-europa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"  data-keyboard="false">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <embed src="{{$modal_europa['url']}}" class="lozad">
+                </div>
+              </div>
+            </div>
+          </div>
+        @endif
       @endif
     @else
       <section class="page-content not-logged jumbo-bg" style="background-image: url({{$hero['global_background']['url']}})">
@@ -49,5 +87,4 @@
       </section>
     @endif
   @endwhile
-
 @endsection

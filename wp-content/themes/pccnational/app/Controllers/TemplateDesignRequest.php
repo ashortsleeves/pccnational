@@ -10,4 +10,15 @@ class TemplateDesignRequest extends Controller
   {
     return get_field("modal_button");
   }
+
+  public function modalCrew()
+  {
+    return get_field("modal_button_crew");
+  }
+
+
+    public function modalEuropa()
+    {
+      return get_field("modal_button_europa");
+    }
 }

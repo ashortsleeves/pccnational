@@ -67,6 +67,10 @@ a.btn,
   }
 }
 
+.btn-light-blue {
+  background-color: $brand-secondary;
+}
+
 .btn-secondary {
   @include btn;
 
