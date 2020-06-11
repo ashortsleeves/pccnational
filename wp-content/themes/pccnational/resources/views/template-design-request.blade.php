@@ -23,12 +23,12 @@
       @if($modal)
         <div class="container-modal-btn">
           <div class="modal-btn-wrap">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal">Starmark</button>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal">Starmark <i class="fas fa-file-pdf"></i></button>
             @if($modal_crew)
-              <button type="button" class="btn btn-primary btn-light-blue" data-toggle="modal" data-target=".bd-example-crew">Crew Series</button>
+              <a href="{{$modal_crew}}" target="_blank" type="button" class="btn btn-primary btn-light-blue">Crew Series <i class="fas fa-external-link-alt"></i></a>
             @endif
             @if($modal_europa)
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-europa">Europa</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-europa">Europa <i class="fas fa-file-pdf"></i></button>
             @endif
           </div>
           <button type="button" class="btn btn-secondary catalog-button">Specifier Catalogs<i class="fas fa-book-open"></i></button>
@@ -37,6 +37,7 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
+                <a class="btn" target="_blank" href="{{$modal['url']}}">Open in New Window <i class="fas fa-external-link-alt"></i></a>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
               <div class="modal-body">
@@ -46,7 +47,7 @@
           </div>
         </div>
 
-        @if($modal_crew)
+        {{-- @if($modal_crew)
           <div class="modal fade bd-example-crew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"  data-keyboard="false">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
@@ -59,12 +60,13 @@
               </div>
             </div>
           </div>
-        @endif
+        @endif --}}
         @if($modal_europa)
           <div class="modal fade bd-example-europa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"  data-keyboard="false">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
+                    <a class="btn" target="_blank" href="{{$modal['url']}}">Open in New Window <i class="fas fa-external-link-alt"></i></a>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
