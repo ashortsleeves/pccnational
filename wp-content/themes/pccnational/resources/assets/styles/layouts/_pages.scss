@@ -401,7 +401,6 @@ button.close {
 
     &.is-active {
       color: rgba(255,255,254,0);
-      // padding: 0;
       margin-left: -15px;
       background: transparent;
       box-shadow: 11px 10px 23px -6px rgba(0,0,0,0.0);
@@ -421,34 +420,12 @@ button.close {
     flex-direction: column;
     max-width: 160px;
     margin-right: 15px;
-
-    // @include phablet {
-    //   display: inline-block;
-    //   max-width: none;
-    //   padding: 15px;
-    // }
-    //
-    // h3 {
-    //   display: block;
-    //   width: 100%;
-    // }
   }
 
   button,
   a.btn {
-    // max-width: 80px;
-    // height: 44px;
     line-height: 1.3;
     margin-bottom: 7px;
-
-    // @include phablet {
-    //   margin-bottom: 0;
-    // }
-
-    // font-size: 14px;
-    // padding: 9px 7px 7px;
-
-
   }
 
   .catalog-button {
@@ -457,5 +434,16 @@ button.close {
       margin-top: 3px;
       font-size: 48px;
     }
+  }
+}
+
+.container-404 {
+  height: calc(100vh - 331px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .alert-warning {
+    text-align: center;
   }
 }
