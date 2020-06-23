@@ -47,20 +47,6 @@
           </div>
         </div>
 
-        {{-- @if($modal_crew)
-          <div class="modal fade bd-example-crew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"  data-keyboard="false">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body">
-                  {!! $modal_crew !!}
-                </div>
-              </div>
-            </div>
-          </div>
-        @endif --}}
         @if($modal_europa)
           <div class="modal fade bd-example-europa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"  data-keyboard="false">
             <div class="modal-dialog modal-lg">

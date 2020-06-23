@@ -15,8 +15,12 @@
           </span>
         </li>
         <li class="email"><a href="mailto:{{$footer['site_info']['email']}}">{{$footer['site_info']['email']}}</a></li>
-        <li class="phone"><a href="tel:{{$footer['site_info']['phone']}}">{{$footer['site_info']['fax']}}</a></li>
-        <li class="fax"><a href="tel:{{$footer['site_info']['fax']}}">{{$footer['site_info']['fax']}}</a></li>
+        @if($footer['site_info']['phone'])
+          <li class="phone"><a href="tel:{{$footer['site_info']['phone']}}">{{$footer['site_info']['fax']}}</a></li>
+        @endif
+        @if($footer['site_info']['fax'])
+          <li class="fax"><a href="tel:{{$footer['site_info']['fax']}}">{{$footer['site_info']['fax']}}</a></li>
+        @endif
       </ul>
     </div>
     <div class="footer-nav">
