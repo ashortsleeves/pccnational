@@ -1,0 +1,7 @@
+body.wp-admin #gf_form_toolbar {
+  display: none;
+}
+
+body.wp-admin .gforms_edit_form #gf_form_toolbar {
+  display: inline-block;
+}
