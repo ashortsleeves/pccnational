@@ -14,7 +14,9 @@
             {{$footer['site_info']['zip']}}
           </span>
         </li>
-        <li class="email"><a href="mailto:{{$footer['site_info']['email']}}">{{$footer['site_info']['email']}}</a></li>
+        @if($footer['site_info']['email'])
+          <li class="email"><a href="mailto:{{$footer['site_info']['email']}}">{{$footer['site_info']['email']}}</a></li>
+        @endif
         @if($footer['site_info']['phone'])
           <li class="phone"><a href="tel:{{$footer['site_info']['phone']}}">{{$footer['site_info']['fax']}}</a></li>
         @endif

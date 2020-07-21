@@ -60,6 +60,25 @@ header.banner {
         right: -25px;
       }
     }
+
+    &.brand-logo::before {
+      @include tablet {
+        right: -125px;
+      }
+    }
+
+    img.hero-logo {
+      display: none;
+
+      @include tablet {
+        display: block;
+        position: absolute;
+        left: calc(100% + 15px);
+        top: 10px;
+        width: 80px;
+        height: auto;
+      }
+    }
   }
 
   nav.nav-primary {

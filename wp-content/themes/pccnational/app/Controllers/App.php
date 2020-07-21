@@ -71,4 +71,9 @@ class App extends Controller
 
       return $user_role;
     }
+
+    public function headerLogo()
+    {
+      return get_field('header_logo_image', 'option');
+    }
 }
