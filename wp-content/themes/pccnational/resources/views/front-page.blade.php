@@ -15,7 +15,12 @@
         <div class="divider"></div>
         <div class="fp-section fp-login">
           <div class="login-icon">
-            <i class="fas fa-users"></i>
+            @if($header_logo)
+              <img class="hero-logo" src="{{$header_logo}}" alt="logo" />
+            @else
+              <i class="fas fa-users"></i>        
+            @endif
+
           </div>
 
           @php
